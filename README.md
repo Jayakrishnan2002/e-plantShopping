@@ -1,16 +1,24 @@
-# React + Vite
+# e-plantShopping: Paradise Nursery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based e-commerce application for a plant nursery where users can browse various house plants, view details, and manage their shopping cart.
 
-Currently, two official plugins are available:
+## Project Overview
+This project, named **e-plantShopping**, is a modern web application built using **React** and **Vite**. It features a responsive design, category-based product filtering, and a fully functional shopping cart system.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+* **Landing Page:** An interactive introduction to Paradise Nursery.
+* **Product Listing:** Browse plants categorized by types like "Air Purifying" and "Aromatic."
+* **Shopping Cart:** Add, remove, and adjust quantities of plants with real-time total price calculation.
+* **Responsive Design:** Fully optimized for mobile, tablet, and desktop views using Tailwind CSS.
 
-## React Compiler
+## Technologies Used
+* **React:** For building the user interface.
+* **Vite:** For a fast development and build process.
+* **Tailwind CSS:** For styling and responsive layouts.
+* **React Router:** For seamless navigation between the home and store pages.
+* **Redux / Context API:** (Add which one you used for state management).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## How to Run Locally
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/jayakrishnan2002/paradise-nursery.git](https://github.com/jayakrishnan2002/paradise-nursery.git)
