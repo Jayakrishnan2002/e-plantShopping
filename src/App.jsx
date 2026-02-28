@@ -39,7 +39,7 @@ function App() {
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
-    <BrowserRouter>
+  <BrowserRouter basename="/paradise-nursery/">
       <Header totalItems={totalItems} />
       <Routes>
         <Route path="/" element={<LandingPage />} />
