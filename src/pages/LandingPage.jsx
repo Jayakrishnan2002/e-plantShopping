@@ -1,29 +1,36 @@
 import { useNavigate } from "react-router-dom";
+import "../App.css"; // CSS file import cheythittu undo ennu urappu varuthuka
 
 function LandingPage() {
   const navigate = useNavigate();
 
   return (
-    <div className="h-screen bg-cover bg-center flex flex-col justify-center items-center text-white"
-      style={{ backgroundImage: "url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6')" }}>
+    /* Tailwind classes-inu purame nammaൾ CSS-il undakkiya class ivide upayogikkuka */
+    <div className="landing-page-container text-white px-4">
       
-      {/* Exact phrase used: Welcome to Paradise Nursery */}
-      <h1 className="text-7xl font-bold mb-4 text-black pt-20 drop-shadow-[0_4px_4px_rgba(255,255,255,0.8)] text-center">
+      {/* Welcome Heading */}
+      <h1 className="text-6xl md:text-7xl font-bold mb-4 text-white drop-shadow-2xl text-center">
         Welcome to Paradise Nursery
       </h1>
 
-      <p className="mb-6 text-lg text-center max-w-md text-green-950 font-bold 
-              bg-white/40 backdrop-blur-md p-4 rounded-xl shadow-sm border border-white/20">
-        Discover beautiful indoor plants to brighten your home and purify your air.
-      </p>
+      {/* Description Box */}
+      <div className="description-box mb-8 shadow-xl">
+        <p className="text-lg md:text-xl text-green-950 font-bold leading-relaxed">
+          Discover beautiful indoor plants to brighten your home and purify your air. 
+          Bring nature indoors with our hand-picked collection.
+        </p>
+      </div>
 
-      {/* Requirement: Button with onClick to display product list */}
+      {/* Get Started Button */}
       <button
         onClick={() => navigate("/products")}
-        className="get-started-btn bg-green-600 text-2xl px-8 py-4 rounded-lg hover:bg-green-700 transition shadow-lg font-bold"
+        className="bg-green-600 text-white text-2xl px-10 py-4 rounded-full 
+                   hover:bg-green-700 transition-all transform hover:scale-105 
+                   shadow-2xl font-bold"
       >
         Get Started
       </button>
+      
     </div>
   );
 }
