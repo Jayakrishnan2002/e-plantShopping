@@ -1,4 +1,4 @@
-import CartItem from "../components/CartItem";
+import CartItem from "../CartItem";
 
 function CartPage({ cart, updateQuantity, removeItem }) {
   // Total calculate cheyyunna logic

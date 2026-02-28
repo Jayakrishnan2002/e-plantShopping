@@ -1,9 +1,9 @@
-import { createSlice } from '@redux/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 export const CartSlice = createSlice({
   name: 'cart',
   initialState: {
-    items: [], // Array of plant objects
+    items: [], // Array of {name, image, cost, quantity}
   },
   reducers: {
     addItem: (state, action) => {
@@ -21,7 +21,7 @@ export const CartSlice = createSlice({
     updateQuantity: (state, action) => {
       const { name, quantity } = action.payload;
       const itemToUpdate = state.items.find(item => item.name === name);
-      if (itemToUpdate) {
+      if (itemToUpdate && quantity > 0) {
         itemToUpdate.quantity = quantity;
       }
     },
@@ -29,5 +29,4 @@ export const CartSlice = createSlice({
 });
 
 export const { addItem, removeItem, updateQuantity } = CartSlice.actions;
-
 export default CartSlice.reducer;

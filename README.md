@@ -1,4 +1,4 @@
-# e-plantShopping: Paradise Nursery
+# e-plantShopping
 
 A React-based e-commerce application for a plant nursery where users can browse various house plants, view details, and manage their shopping cart.
 

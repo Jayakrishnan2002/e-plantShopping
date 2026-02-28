@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"; // Added Link
 import { useState } from "react";
 import LandingPage from "./pages/LandingPage";
-import ProductList from "./pages/ProductList";
+import ProductList from "./ProductList";
 import CartPage from "./pages/CartPage";
 import Header from "./components/Header";
 
@@ -42,7 +42,7 @@ function App() {
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
-    <BrowserRouter basename="/paradise-nursery/">
+    <BrowserRouter basename="/e-plantShopping/">
       {/* Header with Company Name Requirement */}
       <Header totalItems={totalItems} companyName={companyName} />
       
