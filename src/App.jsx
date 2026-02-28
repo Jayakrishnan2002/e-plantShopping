@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom"; // Added Link
 import { useState } from "react";
 import LandingPage from "./pages/LandingPage";
 import ProductList from "./pages/ProductList";
@@ -7,6 +7,9 @@ import Header from "./components/Header";
 
 function App() {
   const [cart, setCart] = useState([]);
+
+  // Company Name constant for visibility
+  const companyName = "Welcome to Paradise Nursery";
 
   const addToCart = (plant) => {
     const existing = cart.find(item => item.id === plant.id);
@@ -39,11 +42,17 @@ function App() {
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
-  <BrowserRouter basename="/paradise-nursery/">
-      <Header totalItems={totalItems} />
+    <BrowserRouter basename="/paradise-nursery/">
+      {/* Header with Company Name Requirement */}
+      <Header totalItems={totalItems} companyName={companyName} />
+      
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        {/* Landing Page Route */}
+        <Route path="/" element={<LandingPage companyName={companyName} />} />
+        
+        {/* Product List Route */}
         <Route path="/products" element={<ProductList addToCart={addToCart} />} />
+        
         <Route path="/cart" element={
           <CartPage
             cart={cart}
